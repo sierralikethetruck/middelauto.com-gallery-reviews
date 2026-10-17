@@ -309,6 +309,10 @@ h2 { margin-bottom: 0; font-size: clamp(40px, 4.5vw, 59px); line-height: 1.08; f
 .eyebrow-dot { background: #1f5fbf; }
 h1 span, h2 span { color: #5b91e0; }
 .hero-description { color: #b6c0cc; }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; }
+.hero-review-link { display: inline-flex; align-items: center; gap: 10px; min-height: 43px; padding: 0 15px; border: 1px solid #d7262d; border-radius: 4px; color: #fff; background: linear-gradient(135deg, #d7262d, #f26a73); font-size: 11px; font-weight: 700; transition: background .2s, transform .18s; }
+.hero-review-link:hover { transform: translateY(-1px); background: #c9212b; }
+.hero-review-link:focus-visible { outline: 2px solid #f26a73; outline-offset: 3px; }
 .text-link { border-bottom-color: #536274; }
 .hero-photo-before { background: linear-gradient(155deg, #4b5664, #202c39 64%, #111821); }
 .hero-photo-after { background: linear-gradient(155deg, #8b9bad, #50627a 65%, #293b53); }
