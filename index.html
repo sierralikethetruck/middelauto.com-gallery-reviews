@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f2ed">
+    <meta name="description" content="A before-and-after project gallery for Mid-Del Auto.">
+    <title>Our work — Mid-Del Auto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Mid-Del Auto home">
+        <img class="wordmark-logo" src="assets/mid-del-auto-logo.png" alt="Mid-Del Auto">
+      </a>
+      <nav class="header-nav" aria-label="Main navigation">
+        <a href="index.html#gallery" class="nav-link active" aria-current="page">Our work</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <a class="header-cta" href="index.html#contact">Book a service <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero" id="work">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> THE MID-DEL AUTO DIFFERENCE</p>
+          <h1>Good work<br>speaks <span>for itself.</span></h1>
+          <p class="hero-description">Every car has a story. Take a look at the care, craft, and transformation behind each one.</p>
+          <a class="text-link" href="#gallery">Explore our work <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-visual" aria-label="Before and after photo gallery preview">
+          <div class="hero-photo hero-photo-before">
+            <span class="photo-label"><span class="label-dot"></span> BEFORE</span>
+            <div class="car-shape car-shape-before" aria-hidden="true"></div>
+            <span class="hero-photo-note">A little road-worn</span>
+          </div>
+          <div class="hero-photo hero-photo-after">
+            <span class="photo-label"><span class="label-dot"></span> AFTER</span>
+            <div class="car-shape car-shape-after" aria-hidden="true"></div>
+            <span class="hero-photo-note">Back to its best</span>
+          </div>
+          <div class="hero-stamp"><span>CARE IN</span><strong>EVERY<br>DETAIL</strong><span>BUILT WITH CARE</span></div>
+          <span class="hero-index">01 / 02</span>
+        </div>
+        <div class="hero-footer">
+          <span>REAL CARS. REAL RESULTS.</span>
+          <span>MADE WITH CARE IN OUR WORKSHOP</span>
+          <span>SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span>
+        </div>
+      </section>
+
+      <section class="gallery-section" id="gallery">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot"></span> THE GALLERY</p>
+            <h2>Proof in the <span>polish.</span></h2>
+          </div>
+          <div class="gallery-actions">
+            <label class="search-box">
+              <span class="visually-hidden">Search projects</span>
+              <span aria-hidden="true">⌕</span>
+              <input id="search-input" type="search" placeholder="Search projects…" autocomplete="off">
+            </label>
+            <button class="button button-dark" id="add-project-button" type="button"><span aria-hidden="true">＋</span> Add a project</button>
+          </div>
+        </div>
+
+        <div class="filter-row" aria-label="Filter projects by service">
+          <button class="filter-chip selected" type="button" data-filter="All">All work <span id="all-count">0</span></button>
+          <button class="filter-chip" type="button" data-filter="Detailing">Detailing</button>
+          <button class="filter-chip" type="button" data-filter="Paint correction">Paint correction</button>
+          <button class="filter-chip" type="button" data-filter="Interior">Interior</button>
+          <button class="filter-chip" type="button" data-filter="Other">Other</button>
+          <span class="results-label" id="results-label"></span>
+        </div>
+
+        <div class="project-grid" id="project-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-icon" aria-hidden="true">✳</span>
+          <h3>Your first transformation starts here.</h3>
+          <p>Add a customer's before and after photos to start building your gallery.</p>
+          <button class="button button-dark" id="empty-add-button" type="button">＋ Add your first project</button>
+        </div>
+        <div class="no-results" id="no-results" hidden>
+          <p>No projects match that search. Try another name or service.</p>
+        </div>
+      </section>
+
+      <section class="about-strip" id="about">
+        <span class="about-mark" aria-hidden="true">M</span>
+        <p>Good work isn't rushed.<br><span>It's done right, down to the last detail.</span></p>
+        <a href="#contact" class="text-link">Meet your auto-care team <span aria-hidden="true">↗</span></a>
+        <a href="reviews.html" class="text-link review-home-link">Customer reviews &amp; ratings <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <a class="wordmark footer-wordmark" href="index.html" aria-label="Mid-Del Auto home">
+        <img class="wordmark-logo" src="assets/mid-del-auto-logo.png" alt="Mid-Del Auto">
+      </a>
+      <p>Thoughtful care for the miles ahead.</p>
+      <a class="footer-contact" href="mailto:hello@example.com">Get in touch <span aria-hidden="true">↗</span></a>
+      <span class="footer-note">© <span id="current-year"></span> Mid-Del Auto. All care, no shortcuts.</span>
+    </footer>
+
+    <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+      <form id="project-form" novalidate>
+        <div class="dialog-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot"></span> ADD TO YOUR GALLERY</p>
+            <h2 id="dialog-title">Show off the <span>transformation.</span></h2>
+          </div>
+          <button class="close-button" id="close-dialog-button" type="button" aria-label="Close form">×</button>
+        </div>
+        <p class="dialog-intro">Add a customer and a matching pair of photos. Your projects stay in this browser on this device.</p>
+        <div class="form-fields">
+          <label class="field">
+            <span>Customer name <span class="required">*</span></span>
+            <input name="customer" type="text" maxlength="70" placeholder="e.g. Alex Morgan" required>
+          </label>
+          <label class="field">
+            <span>Vehicle <span class="required">*</span></span>
+            <input name="vehicle" type="text" maxlength="90" placeholder="e.g. 2021 Audi A4" required>
+          </label>
+          <label class="field">
+            <span>Service <span class="required">*</span></span>
+            <select name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option>Detailing</option>
+              <option>Paint correction</option>
+              <option>Interior</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Date completed</span>
+            <input name="date" type="date">
+          </label>
+          <label class="field field-wide">
+            <span>What did you do? <span class="optional">OPTIONAL</span></span>
+            <textarea name="notes" rows="2" maxlength="220" placeholder="A quick note about the work…"></textarea>
+          </label>
+        </div>
+        <div class="photo-fields">
+          <label class="upload-card">
+            <span class="upload-title">Before <span class="required">*</span></span>
+            <span class="upload-preview" id="before-preview"><span class="upload-plus">＋</span><span>Choose a photo</span></span>
+            <input name="before" type="file" accept="image/*" required>
+          </label>
+          <label class="upload-card">
+            <span class="upload-title">After <span class="required">*</span></span>
+            <span class="upload-preview" id="after-preview"><span class="upload-plus">＋</span><span>Choose a photo</span></span>
+            <input name="after" type="file" accept="image/*" required>
+          </label>
+        </div>
+        <p class="form-message" id="form-message" role="alert"></p>
+        <div class="dialog-actions">
+          <span class="file-hint">Images up to 15 MB each</span>
+          <button class="button button-quiet" id="cancel-button" type="button">Cancel</button>
+          <button class="button button-dark" id="save-button" type="submit">Save project <span aria-hidden="true">↗</span></button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>
